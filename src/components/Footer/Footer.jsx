@@ -9,7 +9,7 @@ const Footer = () => {
         <h1 className="text-4xl font-semibold text-red-600 font-mooli ">
           Let's Talk
         </h1>
-        <div className="flex justify-center py-8 space-x-5 text-xl text-amber-400 md:text-3xl">
+        <div className="flex justify-center py-8 space-x-5 text-xl text-amber-300 md:text-3xl">
           <a
             href="https://api.whatsapp.com/send?phone=918669899671&text=Hello"
             target="_blank"

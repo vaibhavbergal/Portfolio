@@ -1,10 +1,9 @@
-import { Footer, Navbar } from "./components/index";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Footer />
+      <Home />
     </>
   );
 }
