@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <>
       <div className="flex flex-col shadow-lg shadow-black/30 mb-10  items-center py-5 sm:px-3 md:px-10 md:flex-row-reverse bg-gradient-to-tr md:h-[85vh] from-green-200 to-blue-200">
-        <div className="flex gap-2 sm:gap-5 md:w-1/2 md:pr-3 lg:w-[40%]">
+        <div className="flex gap-2 sm:gap-5 lg:gap-8 md:w-1/2 md:pr-3 lg:w-[40%]">
           <img
             src={myImg}
             alt="Vaibhav Img"
