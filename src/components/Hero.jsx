@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 const Hero = () => {
   return (
     <>
-      <div className="flex flex-col shadow-lg shadow-black/30 mb-10  items-center py-5 sm:px-3 md:px-10 md:flex-row-reverse bg-gradient-to-tr md:h-[85vh] from-green-200 to-blue-200">
+      <div className="flex flex-col shadow-lg  dark:shadow-md shadow-black/30 mb-10  items-center py-5 sm:px-3 md:px-10 md:flex-row-reverse bg-gradient-to-tr md:h-[85vh] dark:from-blue-300 dark:to-green-300 from-green-200 to-blue-200">
         <div className="flex gap-2 sm:gap-5 lg:gap-8 md:w-1/2 md:pr-3 lg:w-[40%]">
           <img
             src={myImg}
@@ -15,7 +15,7 @@ const Hero = () => {
             loading="lazy"
             className="h-[50vh] sm:h-[65vh] lg:h-[75vh] border bg-blue-600 rounded-2xl "
           />
-          <ul className="flex flex-col justify-around text-xl sm:text-2xl">
+          <ul className="flex flex-col justify-around text-xl dark:text-black sm:text-2xl">
             <a
               href="https://github.com/vaibhavbergal"
               target="_blank"
@@ -43,7 +43,7 @@ const Hero = () => {
           </ul>
         </div>
         <div className="py-2 mt-5 text-center md:mt-0 md:text-left md:w-1/2 lg:w-[60%] ">
-          <h1 className="font-mono text-3xl font-bold md:leading-snug md:text-4xl lg:text-5xl">
+          <h1 className="font-mono text-3xl font-bold dark:text-black md:leading-snug md:text-4xl lg:text-5xl">
             Hello, I'm <span className="text-red-600">Vaibhav</span>
             <br /> Bergal
           </h1>
@@ -52,7 +52,7 @@ const Hero = () => {
           </p>
           <Button
             variant="outline"
-            className="mt-3 text-lg text-white lg:mt-8 md:mt-5 bg-amber-400 hover:scale-105 hover:bg-amber-500 font-poppins"
+            className="mt-3 text-lg text-white transition-all dark:border-none lg:mt-8 md:mt-5 bg-amber-400 hover:scale-105 hover:bg-amber-500 hover:text-white font-poppins"
           >
             Resume <FaDownload className="ml-2" />
           </Button>

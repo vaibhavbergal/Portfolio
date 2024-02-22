@@ -24,7 +24,7 @@ const Skill = () => {
   return (
     <>
       <Container className="md:py-2">
-        <h1 className="py-1 text-2xl font-bold text-gray-400 border-b md:py-2 border-black/30 md:text-4xl font-mooli">
+        <h1 className="py-1 text-2xl font-bold text-gray-400 border-b md:py-2 dark:border-white/30 border-black/30 md:text-4xl font-mooli">
           Tech Stack
         </h1>
         <ul className="flex flex-wrap justify-center gap-5 my-5">

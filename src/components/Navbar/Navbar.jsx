@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button } from "../ui/button";
 import { FiX } from "react-icons/fi";
 import { CgMenuRightAlt } from "react-icons/cg";
+import { ThemeBtn } from "..";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +18,7 @@ const Navbar = () => {
         <div className="relative ">
           <div className="flex items-center h-16 gap-3 px-3 text-white bg-black shadow-lg md:px-10 ">
             <div className="flex items-center justify-between w-full xl:justify-around ">
-              <Button className="text-2xl font-semibold text-red-700 bg-transparent font-poppins">
+              <Button className="text-2xl font-semibold text-red-700 bg-transparent font-poppins hover:bg-black">
                 {"<"}
                 <span className="text-amber-400">VAIB</span>
                 <span className="text-white">HAV</span>
@@ -33,12 +34,15 @@ const Navbar = () => {
                   </li>
                 ))}
               </ul>
-              <Button
-                onClick={toggleNavbar}
-                className="p-0 px-1 text-3xl bg-transparent md:hidden hover:bg-black"
-              >
-                {!isOpen ? <CgMenuRightAlt /> : <FiX />}
-              </Button>
+              <div className="flex items-center gap-2">
+                <ThemeBtn />
+                <Button
+                  onClick={toggleNavbar}
+                  className="p-0 px-1 text-3xl bg-transparent dark:text-white md:hidden hover:bg-black"
+                >
+                  {!isOpen ? <CgMenuRightAlt /> : <FiX />}
+                </Button>
+              </div>
             </div>
           </div>
         </div>
