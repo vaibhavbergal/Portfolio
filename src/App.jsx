@@ -21,7 +21,7 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{ theme, lightTheme, darkTheme }}>
-      <div className=" dark:bg-gray-900">
+      <div className=" dark:bg-[#0f172a]">
         <Home />
       </div>
     </ThemeContext.Provider>

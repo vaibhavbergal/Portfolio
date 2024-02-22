@@ -24,25 +24,27 @@ const Navbar = () => {
                 <span className="text-white">HAV</span>
                 {"/>"}
               </Button>
-              <ul className="hidden space-x-10 md:flex font-mooli">
+              <ul className="flex space-x-2 md:space-x-10 font-mooli">
                 {nav.map((item) => (
                   <li
                     key={item}
-                    className="py-2 cursor-pointer hover:text-amber-400"
+                    className="hidden py-2 cursor-pointer md:block hover:text-amber-400"
                   >
                     {item}
                   </li>
                 ))}
+                <li className="">
+                  <ThemeBtn />
+                </li>
+                <li>
+                  <Button
+                    onClick={toggleNavbar}
+                    className="p-0 px-1 text-3xl bg-transparent dark:text-white md:hidden hover:bg-black"
+                  >
+                    {!isOpen ? <CgMenuRightAlt /> : <FiX />}
+                  </Button>
+                </li>
               </ul>
-              <div className="flex items-center gap-2">
-                <ThemeBtn />
-                <Button
-                  onClick={toggleNavbar}
-                  className="p-0 px-1 text-3xl bg-transparent dark:text-white md:hidden hover:bg-black"
-                >
-                  {!isOpen ? <CgMenuRightAlt /> : <FiX />}
-                </Button>
-              </div>
             </div>
           </div>
         </div>

@@ -5,5 +5,6 @@ import Container from "./Container/Container";
 import Skill from "./Skill";
 import ThemeBtn from "./ThemeBtn";
 import Projects from "./Projects";
+import Contact from "./Contact";
 
-export { Footer, Navbar, Hero, Container, Skill, ThemeBtn, Projects };
+export { Footer, Navbar, Hero, Container, Skill, ThemeBtn, Projects, Contact };

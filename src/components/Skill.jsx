@@ -23,16 +23,16 @@ const Skill = () => {
 
   return (
     <>
-      <Container className="md:py-2">
+      <Container className="py-2">
         <h1 className="py-1 text-2xl font-bold text-gray-400 border-b md:py-2 dark:border-white/30 border-black/30 md:text-4xl font-mooli">
           Tech Stack
         </h1>
-        <ul className="flex flex-wrap justify-center gap-5 my-5">
+        <ul className="flex flex-wrap justify-center gap-5 my-5 mt-8 md:mt-14">
           {skills.map((item) => {
             return (
               <li
                 key={item.id}
-                className="flex items-center gap-3 p-2 px-3 font-mono font-medium text-white bg-black border-2 border-red-600 rounded-lg cursor-pointer md:text-lg odd:border-purple-600 hover:scale-105"
+                className="flex items-center gap-3 p-2 px-3 font-mono font-medium text-white border-2 border-red-600 rounded-lg cursor-pointer bg-black/85 dark:bg-black md:text-lg odd:border-purple-600 hover:scale-105"
               >
                 <img src={item.img} alt={item.title} className="w-8" />
                 <p>{item.title}</p>

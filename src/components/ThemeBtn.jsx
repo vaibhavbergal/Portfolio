@@ -4,7 +4,7 @@ import { MdOutlineDarkMode } from "react-icons/md";
 import { Button } from "./ui/button";
 import useTheme from "@/context/theme";
 
-export default function ThemeBtn() {
+export default function ThemeBtn({ className, ...props }) {
   const { theme, lightTheme, darkTheme } = useTheme();
   const [isDark, setIsDark] = useState(false);
 
@@ -24,7 +24,7 @@ export default function ThemeBtn() {
       <Button
         variant="outline"
         onClick={handleTheme}
-        className="p-0 text-2xl bg-black border-none hover:text-white dark:text-white hover:bg-black"
+        className={`p-0 text-2xl bg-black border-none hover:text-white dark:text-white hover:bg-black ${className} `}
       >
         {isDark ? <MdOutlineDarkMode /> : <MdOutlineLightMode />}
       </Button>
