@@ -3,7 +3,8 @@ import { ThemeContext } from "./context/theme";
 import Home from "./pages/Home";
 
 function App() {
-  const [theme, setTheme] = useState("light");
+  const initialTheme = localStorage.getItem("theme") || "light";
+  const [theme, setTheme] = useState(initialTheme);
 
   const lightTheme = () => {
     setTheme("light");
@@ -17,11 +18,13 @@ function App() {
     document.querySelector("html").classList.remove("dark", "light");
 
     document.querySelector("html").classList.add(theme);
+
+    localStorage.setItem("theme", theme);
   }, [theme]);
 
   return (
     <ThemeContext.Provider value={{ theme, lightTheme, darkTheme }}>
-      <div className=" dark:bg-[#0f172a]">
+      <div className={`dark:bg-[#0f172a]`}>
         <Home />
       </div>
     </ThemeContext.Provider>

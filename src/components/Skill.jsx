@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Container } from "./index";
 import JS from "../assets/javascript.svg";
 import ReactIcon from "../assets/react.svg";
@@ -23,7 +23,7 @@ const Skill = () => {
 
   return (
     <>
-      <Container className="py-2">
+      <Container id="skills" className="py-2">
         <h1 className="py-1 text-2xl font-bold text-gray-400 border-b md:py-2 dark:border-white/30 border-black/30 md:text-4xl font-mooli">
           Tech Stack
         </h1>

@@ -22,11 +22,14 @@ export default function ThemeBtn({ className, ...props }) {
   return (
     <>
       <Button
-        variant="outline"
         onClick={handleTheme}
-        className={`p-0 text-2xl bg-black border-none hover:text-white dark:text-white hover:bg-black ${className} `}
+        className={`p-0 text-2xl bg-red border-none hover:text-amber-400 dark:text-white hover:red ${className} `}
       >
-        {isDark ? <MdOutlineDarkMode /> : <MdOutlineLightMode />}
+        {isDark ? (
+          <MdOutlineDarkMode className="hover:text-amber-400" />
+        ) : (
+          <MdOutlineLightMode className="hover:text-amber-400" />
+        )}
       </Button>
     </>
   );

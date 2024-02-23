@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Container } from "./index";
 import { MdLocationPin, MdMail } from "react-icons/md";
 import { FaUser } from "react-icons/fa";
@@ -44,7 +44,7 @@ const Contact = () => {
     },
   ];
   return (
-    <Container className="pt-5 md:py-5">
+    <Container id="contact" className="pt-5 md:py-5">
       <h1 className="py-1 text-2xl font-bold text-gray-400 border-b md:py-2 dark:border-white/30 border-black/30 md:text-4xl font-mooli">
         Contact Me
       </h1>
