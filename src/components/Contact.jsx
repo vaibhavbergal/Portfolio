@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Container } from "./index";
 import { MdLocationPin, MdMail } from "react-icons/md";
 import { FaUser } from "react-icons/fa";
@@ -9,6 +9,20 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [msg, setMsg] = useState("");
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     // Your scroll animations or effects here
+  //   };
+
+  //   // Attach scroll event listener when component mounts
+  //   window.addEventListener("scroll", handleScroll);
+
+  //   // Clean up function to remove the event listener when component unmounts
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
