@@ -3,7 +3,7 @@ import { ThemeContext } from "./context/theme";
 import Home from "./pages/Home";
 
 function App() {
-  const initialTheme = localStorage.getItem("theme") || "light";
+  const initialTheme = localStorage.getItem("theme") || "dark";
   const [theme, setTheme] = useState(initialTheme);
 
   const lightTheme = () => {
