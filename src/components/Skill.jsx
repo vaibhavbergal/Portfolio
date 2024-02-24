@@ -36,9 +36,14 @@ const Skill = () => {
             return (
               <li
                 key={item.id}
-                className="flex items-center gap-3 p-2 px-3 font-mono font-medium text-white border-2 border-red-600 rounded-lg cursor-pointer bg-black/85 dark:bg-black md:text-lg odd:border-purple-600 hover:scale-105"
+                className="flex items-center gap-3 p-2 px-3 font-mono font-semibold bg-gray-400 border-2 border-blue-600 rounded-lg shadow-lg cursor-pointer shadow-black/50 dark:text-white dark:border-red-600 dark:bg-black md:text-lg dark:even:border-purple-600 hover:scale-105"
               >
-                <img src={item.img} alt={item.title} className="w-8" />
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  loading="lazy"
+                  className="w-8 mix-blend-multiply dark:mix-blend-normal"
+                />
                 <p>{item.title}</p>
               </li>
             );

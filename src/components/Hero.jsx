@@ -10,9 +10,13 @@ const fadeUp = {
   closed: { opacity: 0, y: 100 },
 };
 
-const fadeRight = {
-  open: { opacity: 1, x: 0, transition: { staggerChildren: 0.5, duration: 1 } },
-  closed: { opacity: 0, x: 200 },
+const ZoomIn = {
+  open: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 1, delay: 0.5 },
+  },
+  closed: { opacity: 0, scale: 0.2 },
 };
 
 const Hero = () => {
@@ -20,35 +24,36 @@ const Hero = () => {
     <>
       <div
         id="home"
-        className="flex flex-col shadow-lg  dark:shadow-md shadow-black/30 mb-10 relative  items-center py-5 sm:px-3 md:px-10 md:flex-row-reverse md:h-[92vh]  bg-black"
+        className="flex flex-col shadow-lg  dark:shadow-md shadow-black/30 mb-10 relative items-center py-5 sm:px-3 md:px-10 md:flex-row-reverse md:h-[92vh] dark:from-black dark:to-black bg-gradient-to-tr from-blue-400 to-blue-200"
       >
         <img
           src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
           loading="lazy"
-          className="absolute z-0 object-cover w-full h-full opacity-10"
+          className="absolute z-0 hidden object-cover w-full h-full dark:block opacity-10"
         />
+
         <motion.div
           initial="closed"
           animate="open"
-          variants={fadeRight}
+          variants={ZoomIn}
           className="flex z-10 gap-2 sm:gap-5 lg:gap-8 md:w-1/2 md:pr-3 lg:w-[40%]"
         >
           <motion.img
-            variants={fadeRight}
+            variants={ZoomIn}
             src={myImg}
             alt="Vaibhav Img"
             loading="lazy"
             className="h-[50vh] sm:h-[65vh] lg:h-[75vh] bg-blue-600 rounded-2xl "
           />
           <motion.ul
-            variants={fadeRight}
-            className="flex flex-col justify-around text-xl text-white sm:text-2xl"
+            variants={ZoomIn}
+            className="flex flex-col justify-around text-xl dark:text-white sm:text-2xl"
           >
             <a
               href="https://github.com/vaibhavbergal"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 border rounded-full cursor-pointer border-white/10 hover:scale-105"
+              className="p-2 border rounded-full cursor-pointer border-black/40 dark:border-white/10 hover:scale-105"
             >
               <FaGithub />
             </a>
@@ -56,7 +61,7 @@ const Hero = () => {
               href="https://www.linkedin.com/in/vaibhav-bergal-04869421b/"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 border rounded-full cursor-pointer border-white/10 hover:scale-105"
+              className="p-2 border rounded-full cursor-pointer border-black/40 dark:border-white/10 hover:scale-105"
             >
               <FaLinkedinIn />
             </a>
@@ -65,7 +70,7 @@ const Hero = () => {
               loading="lazy"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 border rounded-full cursor-pointer border-white/10 hover:scale-105"
+              className="p-2 border rounded-full cursor-pointer border-black/40 dark:border-white/10 hover:scale-105"
             >
               <FaXTwitter />
             </a>
@@ -79,7 +84,7 @@ const Hero = () => {
         >
           <motion.h1
             variants={fadeUp}
-            className="font-mono text-3xl font-bold text-white md:leading-snug md:text-4xl lg:text-5xl"
+            className="font-mono text-3xl font-bold dark:text-white md:leading-snug md:text-4xl lg:text-5xl"
           >
             Hello, I'm <span className="text-red-600">Vaibhav</span>
             <br />
