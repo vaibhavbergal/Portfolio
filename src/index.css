@@ -4,10 +4,23 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  overflow-x: hidden;
+html {
+  overflow-x: hidden !important;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(32, 31, 31);
+  border-radius: 10px;
 }
 
+::selection {
+  color: white;
+  background: #000;
+}
 @layer base {
   :root {
     --background: 0 0% 100%;

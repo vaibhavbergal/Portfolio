@@ -16,7 +16,7 @@ const ZoomIn = {
     scale: 1,
     transition: { duration: 1, delay: 0.5 },
   },
-  closed: { opacity: 0, scale: 0.2 },
+  closed: { opacity: 0, scale: 0.6 },
 };
 
 const Hero = () => {
@@ -78,7 +78,7 @@ const Hero = () => {
         </motion.div>
         <motion.div
           initial="closed"
-          whileInView="open"
+          animate="open"
           variants={fadeUp}
           className="py-2 z-10 mt-5 text-center md:mt-0 md:text-left md:w-1/2 lg:w-[60%] "
         >
@@ -97,11 +97,7 @@ const Hero = () => {
             Frontend Developer
           </motion.p>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            variants={fadeUp}
-          >
+          <motion.div variants={fadeUp}>
             <Button
               variant="outline"
               className="mt-3 text-lg text-white transition-all border-none lg:mt-8 md:mt-5 bg-amber-400 hover:scale-105 hover:bg-amber-500 hover:text-white font-poppins"

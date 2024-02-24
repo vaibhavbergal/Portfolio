@@ -10,20 +10,6 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [msg, setMsg] = useState("");
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     // Your scroll animations or effects here
-  //   };
-
-  //   // Attach scroll event listener when component mounts
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   // Clean up function to remove the event listener when component unmounts
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
-
   const handleSubmit = (e) => {
     e.preventDefault();
     setName("");
