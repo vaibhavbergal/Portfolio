@@ -32,7 +32,7 @@ function App() {
 
   return loading ? (
     <div className="flex items-center justify-center w-full h-screen ">
-      <ScaleLoader color="#87ff00" />
+      <ScaleLoader color="#87ff00" loading={true} width={6} height={40} />
     </div>
   ) : (
     <ThemeContext.Provider value={{ theme, lightTheme, darkTheme }}>

@@ -39,22 +39,20 @@ const Projects = () => {
 
   return (
     <>
-      <div ref={scrollref}>
-        <Container id="projects" className="pt-5 md:py-5">
-          <motion.h1
-            initial="closed"
-            whileInView="open"
-            viewport={{ root: scrollref }}
-            variants={fadeUp}
-            className="py-1 text-2xl font-bold text-gray-400 md:text-4xl font-mooli"
-          >
-            Projects
-          </motion.h1>
-          <hr className="border-black/30 dark:border-white/30" />
+      <Container id="projects" ref={scrollref} className="pt-5 md:py-5">
+        <motion.h1
+          initial="closed"
+          whileInView="open"
+          viewport={{ root: scrollref }}
+          variants={fadeUp}
+          className="py-1 text-2xl font-bold text-gray-400 md:text-4xl font-mooli"
+        >
+          Projects
+        </motion.h1>
+        <hr className="border-black/30 dark:border-white/30" />
 
-          <ProjectCard projects={projects} />
-        </Container>
-      </div>
+        <ProjectCard projects={projects} />
+      </Container>
     </>
   );
 };
