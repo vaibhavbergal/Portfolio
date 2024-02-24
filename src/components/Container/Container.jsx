@@ -1,6 +1,6 @@
-import React from "react";
+import React, { forwardRef } from "react";
 
-const Container = ({ children, className, ...props }) => {
+const Container = forwardRef(({ children, className, ...props }, ref) => {
   return (
     <>
       <div
@@ -11,6 +11,6 @@ const Container = ({ children, className, ...props }) => {
       </div>
     </>
   );
-};
+});
 
 export default Container;

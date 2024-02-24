@@ -1,10 +1,18 @@
-import React, { useEffect } from "react";
+import React, { useRef } from "react";
 import CC from "../assets/img/cc.png";
 import Devify from "../assets/img/Devify.png";
 import TODO from "../assets/img/ToDo.png";
 import { Container, ProjectCard } from "./index";
+import { motion } from "framer-motion";
+
+const fadeUp = {
+  open: { opacity: 1, y: 0, transition: { staggerChildren: 0.2, duration: 1 } },
+  closed: { opacity: 0, y: 60 },
+};
 
 const Projects = () => {
+  const scrollref = useRef(null);
+
   const projects = [
     {
       id: 1,
@@ -31,14 +39,20 @@ const Projects = () => {
 
   return (
     <>
-      <div>
+      <div ref={scrollref}>
         <Container id="projects" className="pt-5 md:py-5">
-          <h1 className="py-1 text-2xl font-bold text-gray-400 border-b md:py-2 dark:border-white/30 border-black/30 md:text-4xl font-mooli">
+          <motion.h1
+            initial="closed"
+            whileInView="open"
+            viewport={{ root: scrollref }}
+            variants={fadeUp}
+            className="py-1 text-2xl font-bold text-gray-400 md:text-4xl font-mooli"
+          >
             Projects
-          </h1>
-          <ul className="flex flex-wrap justify-center gap-5 my-10">
-            <ProjectCard projects={projects} />
-          </ul>
+          </motion.h1>
+          <hr className="border-black/30 dark:border-white/30" />
+
+          <ProjectCard projects={projects} />
         </Container>
       </div>
     </>

@@ -83,7 +83,7 @@ const Navbar = () => {
               </motion.div>
               <motion.ul
                 variants={fadeDown}
-                className="flex space-x-2 md:space-x-10 font-mooli"
+                className="flex md:space-x-10 font-mooli"
               >
                 {nav.map((item) => (
                   <motion.li variants={fadeDown} key={item.id}>

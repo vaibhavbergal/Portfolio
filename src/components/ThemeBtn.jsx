@@ -26,7 +26,7 @@ export default function ThemeBtn({ className, ...props }) {
       <motion.div ref={ref} {...props}>
         <Button
           onClick={handleTheme}
-          className={`p-0 text-2xl bg-red border-none hover:text-amber-400 dark:text-white hover:red ${className} `}
+          className={`p-0 px-1 text-2xl bg-red border-none hover:text-amber-400 dark:text-white hover:red ${className} `}
         >
           {isDark ? (
             <MdOutlineDarkMode className="hover:text-amber-400" />
