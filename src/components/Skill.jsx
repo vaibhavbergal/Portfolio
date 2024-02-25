@@ -39,44 +39,42 @@ const Skill = () => {
 
   return (
     <>
-      <div>
-        <Container id="skills" ref={scrollRef} className="py-2">
-          <motion.h1
-            initial="closed"
-            whileInView="open"
-            viewport={{ root: scrollRef }}
-            variants={fadeUp}
-            className="py-1 text-2xl font-bold text-gray-400 md:py-2 md:text-4xl font-mooli"
-          >
-            Tech Stack
-          </motion.h1>
-          <hr className="border-black/30 dark:border-white/30" />
+      <Container id="skills" className="py-2" ref={scrollRef}>
+        <motion.h1
+          initial="closed"
+          whileInView="open"
+          viewport={{ root: scrollRef }}
+          variants={fadeUp}
+          className="py-1 text-2xl font-bold text-gray-400 md:py-2 md:text-4xl font-mooli"
+        >
+          Tech Stack
+        </motion.h1>
+        <hr className="border-black/30 dark:border-white/30" />
 
-          <motion.ul
-            initial="closed"
-            whileInView="open"
-            viewport={{ root: scrollRef }}
-            variants={ZoomIn}
-            className="flex flex-wrap justify-center gap-5 my-5 mt-8 md:mt-14"
-          >
-            {skills.map((item) => (
-              <motion.li
-                variants={ZoomIn}
-                key={item.id}
-                className="flex items-center gap-3 p-2 px-3 font-mono font-semibold bg-gray-400 border-2 border-blue-600 rounded-lg shadow-lg cursor-pointer shadow-black/50 dark:text-white dark:border-red-600 dark:bg-black md:text-lg dark:even:border-purple-600 hover:scale-105"
-              >
-                <img
-                  src={item.img}
-                  alt={item.title}
-                  loading="lazy"
-                  className="w-8 mix-blend-multiply dark:mix-blend-normal"
-                />
-                <p>{item.title}</p>
-              </motion.li>
-            ))}
-          </motion.ul>
-        </Container>
-      </div>
+        <motion.ul
+          initial="closed"
+          whileInView="open"
+          viewport={{ root: scrollRef }}
+          variants={ZoomIn}
+          className="flex flex-wrap justify-center gap-5 my-5 mt-8 md:mt-14"
+        >
+          {skills.map((item) => (
+            <motion.li
+              variants={ZoomIn}
+              key={item.id}
+              className="flex items-center gap-3 p-2 px-3 font-mono font-semibold bg-gray-400 border-2 border-blue-600 rounded-lg shadow-lg cursor-pointer shadow-black/50 dark:text-white dark:border-red-600 dark:bg-black md:text-lg dark:even:border-purple-600 hover:scale-105"
+            >
+              <img
+                src={item.img}
+                alt={item.title}
+                loading="lazy"
+                className="w-8 mix-blend-multiply dark:mix-blend-normal"
+              />
+              <p>{item.title}</p>
+            </motion.li>
+          ))}
+        </motion.ul>
+      </Container>
     </>
   );
 };

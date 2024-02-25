@@ -1,29 +1,14 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { Container } from "./index";
 import { MdLocationPin, MdMail } from "react-icons/md";
 import { FaUser } from "react-icons/fa";
 import { FaPaperPlane } from "react-icons/fa6";
-import { motion } from "framer-motion";
-
-const fadeUp = {
-  open: { opacity: 1, y: 0, transition: { staggerChildren: 0.2, duration: 1 } },
-  closed: { opacity: 0, y: 60 },
-};
-const ZoomIn = {
-  open: {
-    opacity: 1,
-    scale: 1,
-    transition: { staggerChildren: 0.2, duration: 1 },
-  },
-  closed: { opacity: 0, scale: 0.6 },
-};
 
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [msg, setMsg] = useState("");
-  const ref = useRef(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -60,26 +45,16 @@ const Contact = () => {
   ];
   return (
     <>
-      <Container ref={ref} id="contact" className="pt-5 md:py-5">
-        <motion.h1
-          initial="closed"
-          whileInView="open"
-          viewport={{ root: ref }}
-          variants={fadeUp}
-          className="py-1 text-2xl font-bold text-gray-400 md:text-4xl font-mooli"
-        >
+      <Container id="contact" className="pt-5 md:py-5">
+        <h1 className="py-1 text-2xl font-bold text-gray-400 md:text-4xl font-mooli">
           Contact Me
-        </motion.h1>
+        </h1>
         <hr className="border-black/30 dark:border-white/30" />
         <div className="mt-10 md:flex">
           <div className="md:w-1/2">
             {contactInfo.map((info) => {
               return (
-                <motion.ul
-                  initial="closed"
-                  whileInView="open"
-                  viewport={{ root: ref }}
-                  variants={ZoomIn}
+                <ul
                   key={info.id}
                   className="flex items-center py-4 gap-7 font-ubuntu"
                 >
@@ -99,20 +74,13 @@ const Contact = () => {
                       {info.info}
                     </p>
                   </li>
-                </motion.ul>
+                </ul>
               );
             })}
           </div>
           <div className="mt-8 md:mt-0 md:w-1/2">
-            <motion.form
-              initial="closed"
-              whileInView="open"
-              viewport={{ root: ref }}
-              variants={fadeUp}
-              onSubmit={handleSubmit}
-            >
-              <motion.input
-                variants={fadeUp}
+            <form onSubmit={handleSubmit}>
+              <input
                 type="text"
                 name="Name"
                 value={name}
@@ -121,8 +89,7 @@ const Contact = () => {
                 required
                 className="w-full p-2 px-3 bg-gray-100 rounded-lg shadow-md outline-yellow-500"
               />
-              <motion.input
-                variants={fadeUp}
+              <input
                 type="email"
                 name="Email"
                 value={email}
@@ -131,8 +98,7 @@ const Contact = () => {
                 required
                 className="w-full p-2 px-3 my-5 bg-gray-100 rounded-lg shadow-md outline-yellow-500"
               />
-              <motion.textarea
-                variants={fadeUp}
+              <textarea
                 name="Massage"
                 id=""
                 rows="6"
@@ -140,16 +106,15 @@ const Contact = () => {
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder="Your Message"
                 className="w-full p-2 px-3 bg-gray-100 rounded-lg shadow-xl outline-yellow-500"
-              ></motion.textarea>
+              ></textarea>
 
-              <motion.button
-                variants={fadeUp}
+              <button
                 type="submit"
                 className="py-2 mt-3 shadow-[4px_4px_8px_rgba(0,0,0,0.3)] transition-all duration-100 text-white hover:scale-105 font-medium text-xl w-full text-center font-mooli md:w-fit justify-center bg-yellow-500 rounded-lg px-7 flex items-center gap-2"
               >
                 Send <FaPaperPlane className="text-lg" />
-              </motion.button>
-            </motion.form>{" "}
+              </button>
+            </form>{" "}
             <span id="msg" className="pl-1 text-sm text-red-500 font-mooli">
               {msg}
             </span>
