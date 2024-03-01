@@ -40,7 +40,7 @@ const Contact = () => {
       icon: <FaUser />,
       title: "Resume",
       info: "Download my Resume",
-      link: "",
+      link: "https://drive.google.com/file/d/1Yn4QNAg6LhBz6hJsBwMBSz2IneXxiniG/view?usp=sharing",
     },
   ];
   return (

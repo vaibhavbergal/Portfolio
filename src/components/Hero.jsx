@@ -3,7 +3,7 @@ import myImg from "@/assets/img/person.png";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter, FaDownload } from "react-icons/fa6";
 import { Button } from "@/components/ui/button";
-import { useScroll, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const fadeUp = {
   open: { opacity: 1, y: 0, transition: { staggerChildren: 0.2, duration: 1 } },
@@ -98,12 +98,18 @@ const Hero = () => {
           </motion.p>
 
           <motion.div variants={fadeUp}>
-            <Button
-              variant="outline"
-              className="mt-3 text-lg text-white transition-all border-none lg:mt-8 md:mt-5 bg-amber-400 hover:scale-105 hover:bg-amber-500 hover:text-white font-poppins"
+            <a
+              href="https://drive.google.com/file/d/1Yn4QNAg6LhBz6hJsBwMBSz2IneXxiniG/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Resume <FaDownload className="ml-2" />
-            </Button>
+              <Button
+                variant="outline"
+                className="mt-3 text-lg text-white transition-all border-none lg:mt-8 md:mt-5 bg-amber-400 hover:scale-105 hover:bg-amber-500 hover:text-white font-poppins"
+              >
+                Resume <FaDownload className="ml-2" />
+              </Button>
+            </a>
           </motion.div>
         </motion.div>
       </div>
