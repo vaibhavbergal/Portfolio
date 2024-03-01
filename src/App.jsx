@@ -1,7 +1,8 @@
-import { useState, useEffect, Suspense } from "react";
+import { useState, useEffect, Suspense, lazy } from "react";
 import { ThemeContext } from "./context/theme";
-import Home from "./pages/Home";
+// import Home from "./pages/Home";
 import { ScaleLoader } from "react-spinners";
+const Home = lazy(() => import("./pages/Home"));
 
 function App() {
   const initialTheme = localStorage.getItem("theme") || "dark";
