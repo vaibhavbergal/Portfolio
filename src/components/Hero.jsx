@@ -99,7 +99,7 @@ const Hero = () => {
 
           <motion.div variants={fadeUp}>
             <a
-              href="https://drive.google.com/file/d/1Yn4QNAg6LhBz6hJsBwMBSz2IneXxiniG/view?usp=sharing"
+              href="https://drive.google.com/file/d/1XrZawKPVIGjFHv-JXILbgnBeXyeZSRUH/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >
